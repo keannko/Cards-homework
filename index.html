@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Cards</title>
+</head>
+<body>
+    <div class="wrapper">
+    <a href="../index.html"> <img  src="./img/VHC.png" alt="logo"></a>
+  <div class="button-wrapper"> <button class="enter-button">Вход</button>
+  <div class="create-exit-buttons">
+    <button class="create-button">Создать</button>
+    <button class="exit-button">Выйти</button>
+  </div>
+  </div>
+</div>
+
+<div class="modal-wrap">
+  <div class="modal">
+
+    <h1>Добро пожаловать!</h1>
+      <img src="./img/loginLogo.png" alt="img">
+    <form class="login-form">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" placeholder="Введите email" value="use22222r@gmail.com" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder=" Введите password" value="qwerty" required>
+        <div class="login-btns"> <button type="submit" class="login-form__enterButton">Войти</button>
+        <button class="close-btn">Отмена</button></div>
+        <p class="error-msg">Проверьте правильность данных</p>
+    </form>
+  </div>
+</div>
+
+
+
+    <div class="card-filter-wrap">
+  <form class="card-filter-form">
+      <label for="name">Поиск по содержимому:</label>
+      <input type="text"  name="name" class="card-filter__title input">
+      
+      <label for="status">Статус:</label>
+      <select id="status" name="status" class="card-filter__status input">
+        <option></option>
+        <option value="Open">Open</option>
+        <option value="Done">Done</option>
+      </select>
+  
+      <label for="visitType">Срочность:</label>
+      <select id="visitType" name="visitType" class="card-filter__visitType input">
+        <option value=""></option>
+        <option value="extra">Неотложная</option>
+        <option value="priority">Приоритетная</option>
+        <option value="normal">Обычная</option>
+      </select>
+      <button class="clear-button">Очистить фильтры</button>
+    </form>
+</div>
+    <div class="cards-list-wrapper">
+    <div class="cards-block">
+    </div>
+</div>
+    <div id="myModal" class="modal-window">
+  <div class="modal-content">
+    <p>Создать визит</p>
+
+    <label for="doctor">Выберите врача:</label>
+    <select name="doctor" id="doctor" class="doctor" required>
+      <option value="" selected></option>
+      <option value="cardiologist">Кардиолог</option>
+      <option value="dentist">Стоматолог</option>
+      <option value="generalPractitioner">Терапевт</option>
+    </select>
+
+    <form class="main-form">
+      <label class="main-form__label"
+        >цель визита:<input class="input" type="text" name="visit" id="visit"
+      /></label>
+      <label class="main-form__label"
+        >краткое описание визита:<input
+          class="input"
+          type="text"
+          name="about"
+          id="about"
+      /></label>
+      <label class="main-form__label"
+        >срочность:
+        <select class="input" name="urgency" id="urgency">
+          <option value=""></option>
+          <option value="normal">обычная</option>
+          <option value="priority">приоритетная</option>
+          <option value="extra">неотложная</option>
+        </select></label
+      >
+      <label
+        >ФИО:<input class="input" type="text" name="name" id="name"
+      /></label>
+    </form>
+
+    <form class="cardiologist">
+      <label
+        >обычное давление<input class="input" type="text" name="pressure" id="pressure"
+      /></label>
+      <label
+        >индекс массы тела<input class="input" type="text" name="massIndex" id="massIndex"
+      /></label>
+      <label
+        >перенесенные заболевания сердечно-сосудистой системы<input
+          class="input"
+          type="text"
+          name="diseases"
+          id="diseases"
+      /></label>
+      <label>возраст<input class="input" type="text" name="age" id="age"/></label>
+    </form>
+
+    <form class="dentist">
+      <label
+        >дата последнего посещения<input
+          class="input"
+          type="text"
+          name="lastDate"
+          id="lastDate"
+      /></label>
+    </form>
+
+    <form class="generalPractitioner">
+      <label>возраст<input class="input" type="text" name="clientAge" id="clientAge"/></label>
+    </form>
+
+    <div class="modal-buttons">
+      <button type="submit" class="modal-buttons__create">Создать</button>
+      <button type="submit" class="modal-buttons__edit">Сохранить</button>
+      <button class="modal-buttons__close">Закрыть</button>
+    </div>
+  </div>
+</div>
+
+    <script src="./js/scripts.min.js" type="module"></script>
+</body>
+</html>
+
